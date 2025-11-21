@@ -1,0 +1,94 @@
+#field {
+    margin: 40px auto;
+    width: 320px;
+    display: grid;
+    gap: 8px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background: #222;
+    border-radius: 8px;
+    box-shadow: 0 0 6px #000;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.cell:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 14px #4cafef;
+}
+
+.target {
+    background: blue !important;
+    box-shadow: 0 0 14px blue;
+}
+
+.subtle {
+    background: #1b3cff !important;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    height: 30px;
+}
+
+.correct-msg {
+    color: #4caf50;
+    text-shadow: 0 0 10px #4caf50;
+}
+
+.wrong-msg {
+    color: #e91e63;
+    text-shadow: 0 0 10px #e91e63;
+}
+
+#modeDisplay {
+    font-size: 20px;
+    margin-top: 10px;
+}
+#timer {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Dark mode (default) */
+body {
+    background: #111;
+    color: #fff;
+}
+
+/* Light mode */
+body.light {
+    background: #f0f0f0;
+    color: #000;
+}
+
+/* Light mode - buňky, boxy, gridy */
+body.light .cell {
+    background: #ddd !important;
+    box-shadow: 0 0 8px #aaa;
+}
+
+body.light #grid .cell:hover,
+body.light #field .cell:hover {
+    box-shadow: 0 0 12px #3a70ff;
+}
+
+/* Light mode – message */
+body.light #message {
+    color: #000;
+}
+
+/* Light mode – inputy, buttony */
+body.light button,
+body.light select,
+body.light input {
+    background: #fff;
+    color: #000;
+    border: 1px solid #aaa;
+}

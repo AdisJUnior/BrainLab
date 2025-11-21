@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Statistiky</h2>
+
+<div id="out"></div>
+
+<script>
+let stats = JSON.parse(localStorage.getItem("stats"));
+
+document.getElementById("out").innerHTML = `
+    <p>Paměť – počet her: ${stats.memory.length}</p>
+    <p>Matematika – počet her: ${stats.math.length}</p>
+    <p>Pozornost – počet her: ${stats.attention.length}</p>
+`;
+</script>
+
+</body>
+</html>

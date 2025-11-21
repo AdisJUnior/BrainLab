@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Paměť – Hard Mode</title>
+    <link rel="stylesheet" href="memory.css">
+</head>
+
+<body class="fade-in">
+<header>
+    <h1>BRAINLAB</h1>
+    <button id="modeToggle">🌙</button>
+</header>
+
+<h2>Paměť – Hard Mode</h2>
+
+<div id="message"></div>
+
+<div id="settings">
+    <label>
+        <input type="checkbox" id="customMode" onchange="toggleCustomMode()">
+        Custom mód (ruční výběr obtížnosti)
+    </label>
+
+    <select id="difficulty" disabled onchange="resetGame()">
+        <option value="4">4×4</option>
+        <option value="5">5×5</option>
+        <option value="6">6×6</option>
+        <option value="7">7×7</option>
+    </select>
+
+    <div id="timer">Čas: --</div>
+</div>
+
+<button onclick="startGame()">Start</button>
+
+<div id="roundInfo"></div>
+<div id="grid"></div>
+
+<a href="../index.html" class="back">← Zpět</a>
+<script src="../main.js"></script>
+
+<script src="memory.js"></script>
+</body>
+</html>

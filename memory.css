@@ -1,0 +1,126 @@
+#settings {
+    margin: 15px;
+    font-size: 18px;
+}
+
+#difficulty {
+    padding: 8px;
+    border-radius: 8px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+#timer {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#roundInfo {
+    margin: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#grid {
+    margin: 20px auto;
+    display: grid;
+    gap: 8px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background: #222;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    box-shadow: 0 0 6px #000;
+    cursor: pointer;
+}
+
+.cell:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 14px #4cafef;
+}
+
+.show {
+    background: #4caf50 !important;
+    box-shadow: 0 0 18px #4caf50;
+}
+
+.correct {
+    background: #2196f3 !important;
+    box-shadow: 0 0 18px #2196f3;
+    animation: correctFlash 0.3s ease;
+}
+
+.wrong {
+    background: #e91e63 !important;
+    box-shadow: 0 0 18px #e91e63;
+    animation: wrongFlash 0.3s ease;
+}
+
+@keyframes correctFlash {
+    from { box-shadow: 0 0 0px #2196f3; }
+    to { box-shadow: 0 0 20px #2196f3; }
+}
+
+@keyframes wrongFlash {
+    from { box-shadow: 0 0 0px #e91e63; }
+    to { box-shadow: 0 0 20px #e91e63; }
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    height: 30px;
+    transition: 0.3s ease;
+}
+
+.correct-msg {
+    color: #4caf50;
+    text-shadow: 0 0 10px #4caf50;
+}
+
+.wrong-msg {
+    color: #e91e63;
+    text-shadow: 0 0 10px #e91e63;
+}
+
+/* Dark mode (default) */
+body {
+    background: #111;
+    color: #fff;
+}
+
+/* Light mode */
+body.light {
+    background: #f0f0f0;
+    color: #000;
+}
+
+/* Light mode - buňky, boxy, gridy */
+body.light .cell {
+    background: #ddd !important;
+    box-shadow: 0 0 8px #aaa;
+}
+
+body.light #grid .cell:hover,
+body.light #field .cell:hover {
+    box-shadow: 0 0 12px #3a70ff;
+}
+
+/* Light mode – message */
+body.light #message {
+    color: #000;
+}
+
+/* Light mode – inputy, buttony */
+body.light button,
+body.light select,
+body.light input {
+    background: #fff;
+    color: #000;
+    border: 1px solid #aaa;
+}
